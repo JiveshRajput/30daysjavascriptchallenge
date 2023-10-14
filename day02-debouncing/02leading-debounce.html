@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h3>Saving Text Changes in DB when user start typing again...</h3>
+        <textarea rows="10" cols="50" id="paragraph"></textarea>
+    </div>
+
+    <script>
+        let paraText = document.getElementById('paragraph');
+        
+        function leadingDebounce(cb, timeout = 500) {
+            let timer;
+            return (...args) => {
+                if (!timer) {
+                    cb.apply(this, args);
+                }
+                clearTimeout(timer)
+                timer = setTimeout(() => {
+                    timer = undefined;
+                }, timeout);
+            }
+        }
+
+        const saveDebounce = leadingDebounce((e) => { console.log(e.target.value); })
+        paraText.addEventListener('keyup', saveDebounce)
+        
+    </script>
+</body>
+
+</html>
