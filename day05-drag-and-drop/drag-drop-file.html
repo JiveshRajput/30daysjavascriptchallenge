@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 10px;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        .dropzone {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 34px;
+            border: 2px solid #1576c1;
+            background-color: #94dbfd;
+            border-radius: 10px;
+            transition: transform 0.5s;
+
+        }
+
+        .dropzone.dragover {
+            transform: scale(0.9);
+
+        }
+
+        #file-dropzone {
+            width: 400px;
+            height: 200px;
+            margin: 20px 0px 20px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Drag & Drop</h1>
+
+    <div class="dropzone" id="file-dropzone">Drop your file here</div>
+
+    <p>Selected File: </p>
+
+    <ul id="output"></ul>
+
+    <script src="./drag-drop-file.js"></script>
+</body>
+
+</html>

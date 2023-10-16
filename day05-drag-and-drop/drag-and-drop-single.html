@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag & Drop in Javascript</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        .drop-targets {
+            padding: 10px;
+            display: flex;
+            gap: 30px;
+
+        }
+
+        .box {
+            border: 2px solid black;
+            width: 150px;
+            height: 150px;
+            padding: 25px;
+        }
+
+        .item {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .drag-over {
+            border: dashed 3px red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>JavaScript - Drag and Drop</h1>
+        <div class="drop-targets">
+            <div class="box">
+                <div class="item" id="item" draggable="true"></div>
+            </div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </div>
+    <script src="./drag-and-drop-single.js"></script>
+</body>
+</html>

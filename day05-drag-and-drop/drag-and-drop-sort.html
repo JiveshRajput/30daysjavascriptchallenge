@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag & Drop in Javascript</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            padding: 10px;
+            display: flex;
+            gap: 30px;
+        }
+
+        .dropzone {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 34px;
+            border: 2px solid #1576c1;
+            background-color: #94dbfd;
+            border-radius: 10px;
+            transition: transform 0.5s;
+
+        }
+
+        .dropzone.dragover {
+            transform: scale(0.9);
+
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            padding: 25px;
+            border-radius: 10px;
+            cursor: move;
+            user-select: none;
+        }
+
+        .box[data-item='A'] {
+            border: 2px solid #f97d02;
+            background-color: #ffdca9;
+        }
+        .box[data-item='B'] {
+            border: 2px solid #3cb43c;
+            background-color: #bcf8b9;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>JavaScript - Drag and Drop</h1>
+    <div class="container">
+        <div draggable="true" class="dropzone box" data-item="A">A</div>
+        <div draggable="true" class="dropzone box" data-item="B">B</div>
+        <div draggable="true" class="dropzone box" data-item="C">C</div>
+    </div>
+    <script src="./drag-and-drop-sort.js"></script>
+</body>
+
+</html>
+
+<!-- https://www.youtube.com/watch?v=lSCLnWoa6Tw -->
